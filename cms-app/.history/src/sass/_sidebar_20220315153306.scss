@@ -1,0 +1,43 @@
+.sidebar {
+  max-width: 252px;
+  display: flex;
+  flex: 0.5;
+  left: 0;
+  top: 0;
+  margin: 0 0 0 32px;
+  background-color: $backgroundColor;
+  align-items: flex-start;
+  padding: 0px;
+  position: relative;
+  width: 252px;
+  height: 572px;
+
+  &-logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 17px;
+    bottom: 0;
+    height: 58px;
+    width: 133px;
+  }
+  &-container {
+    position: absolute;
+    display: flex;
+    top: 25%;
+  }
+  &-menu {
+    list-style-type: none;
+    font-size: $text-md;
+    font-weight: 500;
+    padding: 0 !important;
+    background-color: transparent;
+
+    &-item {
+      padding: 10px 0;
+    }
+    &-ant-menu-title-content {
+      padding-left: 0;
+    }
+  }
+}

@@ -1,0 +1,52 @@
+.header {
+  right: 0;
+  display: flex;
+  background-color: $backgroundColor;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 34px 0 32px;
+  font-size: $text-base;
+  color: $searchText;
+  &-search {
+    position: absolute;
+    opacity: 0.7;
+    font-weight: 400;
+    font-style: italic;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 437px;
+    height: 48px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: $searchColor;
+    justify-content: space-between;
+    left: 0;
+    &-input {
+      background-color: transparent;
+    }
+    &-icon {
+      font-size: 2rem;
+    }
+  }
+  &-account {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    right: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    &-icon {
+      padding: 0 14px;
+      color: $searchText;
+      font-size: $text-md;
+    }
+    &-avatar {
+      border-radius: $rounded;
+      width: 48px;
+      height: 48px;
+    }
+  }
+}

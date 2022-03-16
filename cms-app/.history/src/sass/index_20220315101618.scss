@@ -1,0 +1,19 @@
+@import './reset';
+@import './variables';
+@import './header';
+@import './sidebar';
+@import './main';
+
+html {
+  font-size: 62.5%;
+}
+font {
+  //styleName: 18 bold;
+  font-family: $font-primary;
+}
+
+:root {
+  // coloring
+  --primary-color:: $primary-color;
+  --background-color:: $backgroundColor;
+}

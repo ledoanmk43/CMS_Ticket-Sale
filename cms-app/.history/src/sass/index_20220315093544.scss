@@ -1,0 +1,19 @@
+@import './reset';
+@import './variables';
+@import './header';
+@import './sidebar';
+@import './main';
+
+html {
+  font-size: 62.5%;
+}
+font {
+  //styleName: 18 bold;
+  font-family: Montserrat;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: $background-color;
+}

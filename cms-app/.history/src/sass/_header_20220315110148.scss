@@ -1,0 +1,13 @@
+.header {
+  position: absolute;
+  background-color: $backgroundColor;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-search {
+    top: 17px;
+    width: 437px;
+    height: 48px;
+    left: 321px;
+  }
+}

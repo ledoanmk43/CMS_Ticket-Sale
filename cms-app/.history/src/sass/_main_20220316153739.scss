@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  display: flex;
+}
+.container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: space-between;
+  height: 100vh;
+  flex: 1;
+}
+.main {
+  position: absolute;
+  display: flex;
+  height: 100%;
+  background: #ffffff;
+  bottom: 0;
+}

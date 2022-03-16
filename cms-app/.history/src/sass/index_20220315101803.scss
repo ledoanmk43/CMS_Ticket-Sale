@@ -1,0 +1,20 @@
+@import './reset';
+@import './variables';
+@import './header';
+@import './sidebar';
+@import './main';
+
+html {
+  font-size: 62.5%;
+}
+
+
+:root {
+  // coloring
+  --primary-color:: $primary-color;
+  --background-color:: $backgroundColor;
+  --primary-font: $font-primary;
+}
+body{
+font-family: var(--primary-font);
+}

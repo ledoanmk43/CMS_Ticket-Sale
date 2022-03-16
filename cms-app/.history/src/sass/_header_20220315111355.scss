@@ -1,0 +1,24 @@
+.header {
+  background-color: $backgroundColor;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  &-search {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 17px;
+    width: 437px;
+    height: 48px;
+
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: $searchColor;
+  }
+  &-account {
+    &-avatar {
+      border-radius: $rounded;
+    }
+  }
+}
