@@ -1,0 +1,8 @@
+.container {
+  display: flex;
+  &-statistic {
+    font-size: $text-xl;
+    font-style: bold;
+    padding: 20px;
+  }
+}

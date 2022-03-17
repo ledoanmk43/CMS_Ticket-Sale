@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
+    "@date-io/date-fns": "^2.13.1",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@fortawesome/fontawesome-free": "^6.0.0",
@@ -17,7 +18,10 @@
     "@types/react": "^17.0.40",
     "@types/react-dom": "^17.0.13",
     "antd": "^4.19.2",
+    "chart.js": "^3.7.1",
+    "faker": "^6.6.6",
     "react": "^17.0.2",
+    "react-chartjs-2": "^4.0.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-router-dom": "^6.2.2",
@@ -48,5 +52,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^6.0.0"
   }
 }

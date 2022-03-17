@@ -1,0 +1,9 @@
+.dashboard {
+  display: flex;
+  p.statistic {
+    font-size: $text-xl;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 54px;
+  }
+}

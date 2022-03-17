@@ -1,0 +1,7 @@
+&-container {
+  display: flex;
+  &-statistic {
+    font-size: $text-xl;
+    font-style: bold;
+  }
+}
