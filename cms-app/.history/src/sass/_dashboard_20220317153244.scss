@@ -1,0 +1,47 @@
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  color: $searchText;
+  p.statistic {
+    color: inherit;
+    font-size: $text-xl;
+    font-style: bold;
+    font-weight: 700;
+    line-height: 54px;
+  }
+  &-revenue {
+    display: flex;
+    flex-direction: column;
+  }
+  .chart {
+    max-height: 20rem !important;
+    width: 100%;
+    left: 80.43243408203125px;
+    top: 89.55859375px;
+    border-radius: 0px;
+
+    background: linear-gradient(
+      180deg,
+      rgba(250, 160, 95, 0.26) 0%,
+      rgba(255, 255, 255, 0) 141.68%
+    );
+  }
+}
+.title {
+  color: inherit;
+
+  font-weight: 600;
+  font-size: $text-md;
+  line-height: 28px;
+}
+.sm-title {
+  font-size: $text-sm;
+  line-height: 22px;
+  font-weight: 500;
+  opacity: 0.5;
+}
+.sum-revenue {
+  font-size: $text-lg;
+  font-weight: 700;
+  line-height: 30px;
+}

@@ -1,0 +1,24 @@
+@import './reset';
+@import './variables';
+@import './header';
+@import './sidebar';
+@import './main';
+@import './dashboard';
+@import './ticketmanagement';
+@import './ticketcheck';
+@import './servicepack';
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  // coloring
+  --primary-color: #ffb800;
+  --background-color: #f9f6f4;
+  --primary-font: 'Montserrat';
+}
+body {
+  font-family: 'Montserrat' !important;
+  background-color: var(--background-color);
+}

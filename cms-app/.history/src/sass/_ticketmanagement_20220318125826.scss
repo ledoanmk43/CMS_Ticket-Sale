@@ -1,0 +1,87 @@
+.section {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 4.7rem 0;
+  &-search {
+    position: absolute;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    max-width: 415px;
+    height: 48px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: #f7f7f8;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    &-input {
+      max-width: 80%;
+      font-size: $text-base;
+      font-weight: 400;
+      font-style: italic;
+      align-items: center;
+      background-color: transparent;
+      line-height: 20px;
+      padding: 0.4rem 15.6rem 0.4rem 0;
+    }
+    &-icon {
+      font-size: 2rem;
+      color: black;
+      cursor: pointer;
+    }
+  }
+}
+.filter {
+  display: flex;
+  button.export:after {
+    content: '(.csv)';
+  }
+}
+.btn-ticket {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 1px solid $button-color;
+  color: $button-color;
+  font-weight: 700;
+  font-size: $text-md;
+  line-height: 26px;
+  padding: 10px 16px;
+  margin: 0 0.5rem;
+  &:hover {
+    color: white;
+    background-color: $button-color;
+  }
+}
+.ticket-status {
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  opacity: 0.9;
+  border-radius: 8px;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+table {
+  border-spacing: 0 1 rem;
+  width: 100%;
+  line-height: 22px !important;
+  font-weight: 500 !important;
+  font-size: $text-sm !important;
+}
+.ant-table-thead {
+  background-color: #f1f4f8;
+  font-size: $text-base;
+  font-weight: 600;
+  line-height: 26px;
+}
+.ant-table-tbody {
+}
+.ant-table-row {
+}
