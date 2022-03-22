@@ -1,0 +1,37 @@
+.border-none {
+  border: none;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-half {
+  flex: 0.5;
+}
+.row {
+  display: flex;
+  height: 100vh;
+  margin: 0 0 32px 0;
+}
+p.title_lg {
+  color: inherit;
+  font-size: $text-lg;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 0.5rem;
+}
+.flex-start {
+  justify-content: flex-start;
+  .content {
+    margin-left: 15rem;
+    display: flex;
+    flex-direction: column;
+    .ant-checkbox-checked::after,
+    .ant-checkbox-inner {
+      border-radius: 50% !important;
+    }
+    .ant-checkbox-indeterminate > .ant-checkbox-inner::after {
+      border-radius: 50% !important;
+    }
+  }
+}

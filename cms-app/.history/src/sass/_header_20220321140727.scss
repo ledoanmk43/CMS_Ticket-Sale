@@ -1,0 +1,65 @@
+.header {
+  padding: 4.1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: $backgroundColor;
+  margin: 0 32px 0 0;
+  font-size: $text-base;
+  color: $searchText;
+  &-search {
+    position: absolute;
+    opacity: 0.7;
+    display: flex;
+    flex-direction: row;
+    width: 35%;
+    max-width: 437px;
+    height: 48px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    background-color: $searchColor;
+    justify-content: space-between;
+    align-items: center;
+    left: 0;
+    &-input {
+      max-width: 80%;
+      font-size: $text-base;
+      font-weight: 400;
+      font-style: italic;
+      align-items: center;
+      background-color: transparent;
+      line-height: 20px;
+      padding: 0.4rem 15.6rem 0.4rem 0;
+    }
+    &-icon {
+      font-size: 2rem;
+      color: black;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+  }
+  &-account {
+    position: absolute;
+    align-items: center;
+    display: flex;
+    right: 0;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    &-icon {
+      margin: 0 14px;
+      color: $searchText;
+      font-size: $text-md;
+      cursor: pointer;
+    }
+    &-avatar {
+      border-radius: $rounded;
+      width: 48px;
+      height: 48px;
+      margin-left: 12px;
+      cursor: pointer;
+    }
+  }
+}

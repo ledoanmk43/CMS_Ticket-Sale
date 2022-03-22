@@ -1,0 +1,54 @@
+.border-none {
+  border: none;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-half {
+  flex: 0.5;
+}
+.row {
+  display: flex;
+  height: 100vh;
+  margin: 0 0 32px 0;
+}
+p.title_lg {
+  color: inherit;
+  font-size: $text-lg;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 0.5rem;
+}
+.flex-start {
+  justify-content: flex-start;
+  margin: 1rem 0;
+  .content {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    .ticket {
+      margin-left: 10rem;
+    }
+    .ant-checkbox-checked::after,
+    .ant-checkbox-inner {
+      border-radius: 50% !important;
+      font-size: $text-base !important;
+      color: red !important;
+    }
+    .ant-checkbox-indeterminate > .ant-checkbox-inner::after {
+      border-radius: 50% !important;
+    }
+    .ant-checkbox-group {
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-checkbox-group-item {
+      margin: 0 !important;
+    }
+  }
+}
+.checkbox {
+  margin-top: 4.5rem;
+}

@@ -1,0 +1,73 @@
+.border-none {
+  border: none;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-half {
+  flex: 0.5;
+}
+.row {
+  display: flex;
+  height: 100vh;
+  margin: 0 0 32px 0;
+}
+p.title_lg {
+  color: inherit;
+  font-size: $text-lg;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 0.5rem;
+}
+.flex-start {
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+  .content {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    .ticket {
+      font-size: $text-base !important;
+      color: $searchText;
+      line-height: 20px;
+    }
+    .ant-checkbox-wrapper {
+      font-size: $text-base !important;
+      color: $searchText;
+    }
+    .ant-checkbox-checked::after,
+    .ant-checkbox-inner {
+      border-radius: 50% !important;
+    }
+    .ant-checkbox {
+      margin-bottom: 1.5rem;
+    }
+    .ant-checkbox-indeterminate > .ant-checkbox-inner::after {
+      border-radius: 50% !important;
+    }
+    .ant-checkbox-group {
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-checkbox-group-item {
+      margin: 0 !important;
+    }
+  }
+}
+.ant-picker-date-panel {
+  left: -10rem !important;
+}
+.checkbox {
+  margin-top: 7rem;
+}
+.btn-filter {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color:transparent !important :hover {
+    color: white !important;
+    background-color: $button-color !important;
+  }
+}

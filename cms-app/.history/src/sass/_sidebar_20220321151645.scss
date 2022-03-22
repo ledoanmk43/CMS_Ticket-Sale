@@ -1,0 +1,82 @@
+.sidebar {
+  display: flex;
+  flex: 0.1;
+  left: 0;
+  top: 0;
+  margin: 0 0 0 32px;
+  flex-direction: column;
+  background-color: $backgroundColor;
+  align-items: flex-start;
+  padding: 0px;
+  position: relative;
+  min-width: 252px;
+  // max-width: 321px;
+  height: 100vh;
+  justify-content: space-between;
+  &-logo {
+    position: absolute;
+    top: 17px;
+    height: 58px;
+    width: 133px;
+    cursor: pointer;
+  }
+  &-copyright {
+    position: absolute;
+    bottom: 2rem;
+    left: -5%;
+    opacity: 0.5;
+    display: flex;
+    align-items: center;
+    &-cpr {
+      font-size: $text-sm;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  &-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 23.1%;
+    // left: 7.5%;
+    max-width: 252px;
+    width: 80%;
+    align-items: flex-start;
+    align-content: center;
+    &-item {
+      font-size: $text-md;
+      padding: 14px 30px 14px 20px;
+      border-radius: 8px;
+      white-space: nowrap;
+      line-height: 26px;
+      opacity: 0.6;
+      width: 100%;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      &:hover,
+      :focus {
+        opacity: 1;
+        background-color: $primary-color;
+        color: white;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.sub {
+  margin-left: 4rem;
+  text-decoration: none;
+  width: 83.5%;
+  &-hidden {
+    display: none;
+  }
+}
+.icon {
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
