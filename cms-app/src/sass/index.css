@@ -768,6 +768,10 @@ p.title_lg {
   border-radius: 50% !important;
 }
 
+.flex-start .content .ant-picker {
+  margin-left: 2rem;
+}
+
 .flex-start .content .ant-checkbox {
   margin-bottom: 1.5rem;
 }

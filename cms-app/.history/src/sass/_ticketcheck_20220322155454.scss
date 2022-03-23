@@ -24,7 +24,7 @@ p.title_lg {
   justify-content: flex-start;
   margin: 1.5rem 0;
   .content {
-    margin-left: 2rem;
+    // margin-left: 2rem;
     display: flex;
     flex-direction: column;
     .ticket {
@@ -39,9 +39,6 @@ p.title_lg {
     .ant-checkbox-checked::after,
     .ant-checkbox-inner {
       border-radius: 50% !important;
-    }
-    .ant-picker {
-      margin-left: 2rem;
     }
     .ant-checkbox {
       margin-bottom: 1.5rem;
