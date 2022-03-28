@@ -1,0 +1,24 @@
+.calendar-container {
+  width: fit-content;
+  &.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+}
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19.5px;
+}
+tbody td:hover .date-hover {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}

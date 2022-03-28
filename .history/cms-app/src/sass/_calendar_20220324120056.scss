@@ -1,0 +1,74 @@
+.calendar-container {
+  width: fit-content;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  padding: 24px 32px;
+  width: 370px;
+  height: 396px;
+  box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+  border-radius: 20px;
+  &-header {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0 16px;
+    }
+  }
+  &-table {
+    &-dates-header {
+      th {
+        padding-left: 0 !important;
+        width: 46px;
+        color: #c55e00;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left !important;
+        margin: 0 1rem !important;
+      }
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    cursor: pointer;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19.5px;
+    .week-control,
+    .day-control {
+      display: flex;
+      align-items: center;
+    }
+    .week-control span,
+    .day-control span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .week-control input,
+    .day-control input {
+      height: 16px;
+      width: 16px;
+    }
+    span {
+      margin-left: 12px;
+    }
+  }
+  &-date-hover {
+    tbody td:hover {
+      background-color: red;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+}

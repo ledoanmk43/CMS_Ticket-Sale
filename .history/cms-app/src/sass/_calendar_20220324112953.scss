@@ -1,0 +1,42 @@
+.calendar-container {
+  width: fit-content;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  &-header {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  .table th {
+    width: 46px;
+    color: #c55e00;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: left;
+  }
+}
+.btn-prev,
+.btn-next {
+  cursor: pointer;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19.5px;
+}
+tbody td:hover .date-hover {
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.dates-row td {
+  height: 47px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+}

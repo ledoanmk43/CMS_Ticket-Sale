@@ -1,0 +1,101 @@
+.calendar-container {
+  width: 370px;
+  height: fit-content !important;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  padding: 24px 32px;
+  box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+  border-radius: 20px;
+  table {
+    th:last-child {
+      padding-left: 0 !important;
+    }
+    border-collapse: none;
+    tr:nth-child(even) {
+      background-color: white;
+    }
+    th {
+      padding-left: 0 !important;
+      width: 46px;
+      color: #c55e00;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: left !important;
+    }
+    tr {
+      td {
+        margin: 1px !important ;
+        padding: 1rem !important;
+        width: 20px !important;
+        height: 20px !important;
+        font-weight: 500 !important;
+        font-size: $text-base;
+        line-height: 20px !important;
+        &.in-prev-month,
+        &.in-next-month {
+          color: #93aecf;
+        }
+        &:hover {
+          border-radius: 50%;
+          border: 0.5px solid #c55e00;
+        }
+      }
+    }
+  }
+  &-header {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0 16px;
+    }
+  }
+
+  .btn-prev,
+  .btn-next {
+    cursor: pointer;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 19.5px;
+    .week-control,
+    .day-control {
+      display: flex;
+      align-items: center;
+    }
+    .week-control span,
+    .day-control span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .week-control input,
+    .day-control input {
+      height: 16px;
+      width: 16px;
+    }
+    span {
+      margin-left: 12px;
+    }
+  }
+  .table {
+    // &-dates-header {
+    //   display: flex !important;
+    // }
+    // &-dates-body {
+    //   display: table-row-group !important;
+    // }
+  }
+}
+.today {
+  color: white;
+  background-color: #ffba7b !important;
+  border-radius: 50%;
+}

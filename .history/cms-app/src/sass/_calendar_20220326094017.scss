@@ -1,0 +1,122 @@
+.calendar-container {
+  max-width: 370px;
+  height: 396px !important;
+  position: absolute;
+  background-color: white;
+  z-index: 10;
+  padding: 24px 32px;
+  box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+  border-radius: 20px;
+  .table {
+    position: relative;
+    display: flex !important;
+    flex-direction: column !important;
+    height: fit-content !important;
+    table {
+      padding: 10px !important;
+
+      th:last-child {
+        padding-left: 0 !important;
+      }
+      tr:nth-child(even) {
+        background-color: white;
+      }
+      th {
+        padding-left: 0 !important;
+        width: 46px;
+        color: #c55e00;
+        font-weight: 600;
+        font-size: $text-md !important;
+        line-height: 28px !important;
+        text-align: left !important;
+      }
+      tbody {
+        position: absolute !important;
+        left: -12px !important;
+        border-spacing: 0.2em !important;
+        border-collapse: separate;
+        tr {
+          td {
+            width: 20px !important;
+            height: 20px !important;
+            font-weight: 500 !important;
+            font-size: $text-base !important;
+            line-height: 20px !important;
+            text-align: center !important;
+            &.in-prev-month,
+            &.in-next-month {
+              color: #93aecf;
+            }
+            &:hover {
+              cursor: pointer;
+              border-radius: 50%;
+              background-color: #ffd2a8;
+              color: white;
+              // border: 0.5px solid #c55e00;
+            }
+          }
+        }
+      }
+    }
+  }
+  &-header {
+    display: flex !important;
+    align-items: center;
+    margin-bottom: 16px;
+    p {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0 16px;
+    }
+  }
+
+  .btn-prev,
+  .btn-next {
+    cursor: pointer;
+  }
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.015em !important;
+    .week-control,
+    .day-control {
+      display: flex;
+      align-items: center;
+    }
+    .week-control span,
+    .day-control span {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    .week-control input,
+    .day-control input {
+      height: 16px;
+      width: 16px;
+    }
+    span {
+      margin-left: 8px;
+    }
+  }
+}
+.today {
+  color: white;
+  background-color: #ffba7b !important;
+  border-radius: 50%;
+}
+.heading {
+  display: flex;
+}
+.day-width {
+  height: 46px;
+}
+.day-container {
+  display: flex;
+}
+.day {
+}
