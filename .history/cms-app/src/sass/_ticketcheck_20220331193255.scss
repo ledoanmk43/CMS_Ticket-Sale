@@ -1,0 +1,124 @@
+.border-none {
+  border: none;
+}
+.mr-24 {
+  margin-right: 24px;
+}
+.flex-1 {
+  flex: 1;
+  margin-right: 32px;
+}
+.flex-half {
+  flex: 0.1;
+}
+.row {
+  display: flex;
+  height: 100%;
+  margin: 0 0 32px 0;
+}
+p.title_lg {
+  color: inherit;
+  font-size: $text-lg;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 0.5rem;
+}
+.flex-start {
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+  .content {
+    margin-left: 2rem;
+    display: flex;
+    flex-direction: column;
+    .ticket {
+      font-size: $text-base !important;
+      color: $searchText;
+      line-height: 20px;
+    }
+    .ant-checkbox-wrapper {
+      font-size: $text-base !important;
+      color: $searchText;
+    }
+    .ant-checkbox-checked::after,
+    .ant-checkbox-inner {
+      border-radius: 50% !important;
+    }
+    .ant-picker {
+      margin-left: 2rem;
+    }
+    .ant-checkbox {
+      margin-bottom: 1.5rem;
+    }
+    .ant-checkbox-indeterminate > .ant-checkbox-inner::after {
+      border-radius: 50% !important;
+    }
+    .ant-checkbox-group {
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+    }
+    .ant-checkbox-group-item {
+      margin: 0 !important;
+    }
+  }
+}
+.ant-picker-date-panel {
+  left: -10rem !important;
+}
+.checkbox {
+  margin-top: 7rem;
+}
+.btn-filter {
+  border: 1px solid $button-color;
+  color: $button-color;
+  background-color: transparent;
+  border-radius: 8px;
+  padding: 0.5rem 5rem;
+  display: flex;
+  font-weight: 600;
+  line-height: 26px;
+  font-size: $text-md;
+  margin: 2rem auto;
+  &:hover {
+    cursor: pointer;
+    color: white !important;
+    background-color: $button-color !important;
+  }
+}
+.edit {
+  color: $button-color;
+  display: flex;
+  align-items: center;
+  font-size: $text-sm;
+  cursor: pointer;
+  background-color: transparent;
+}
+.selection {
+  margin-top: 1rem;
+  z-index: 10 !important;
+  .ant-select {
+    display: flex;
+    width: 100% !important;
+    .ant-select-selector {
+      padding: 0 !important;
+      background-color: #f1f4f8 !important;
+      border: none !important;
+      border-radius: 8px !important;
+      span {
+        padding: 0 16px !important;
+      }
+
+      .ant-select-selection-item {
+        font-size: $text-base !important;
+        font-weight: 600 !important;
+        color: #7c7d95 !important;
+        line-height: 1px;
+      }
+    }
+  }
+}
+.ant-select-arrow {
+  color: $button-color !important;
+  font-size: $text-sm !important;
+}

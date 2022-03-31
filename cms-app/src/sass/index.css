@@ -285,7 +285,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  width: 100%;
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
@@ -487,9 +486,9 @@ table .ant-table-cell {
 }
 
 table th {
-  text-align: center !important;
+  text-align: center;
   border: none !important;
-  padding: 0.5rem 0.5rem !important;
+  padding: 0.5rem 1.5rem 0.5rem 0 !important;
   border-bottom: none !important;
   font-size: 16px !important;
   font-style: bold !important;
@@ -502,6 +501,7 @@ table th::before {
 }
 
 table th:first-child {
+  padding: 0.5rem 1rem !important;
   border-radius: 8px 0 0 !important;
 }
 
@@ -514,20 +514,44 @@ table th:nth-child(4) {
 }
 
 table th:last-child {
+  padding: 0.5rem 1rem !important;
   border-radius: 0 8px 0 !important;
 }
 
 table td {
   padding: 1rem !important;
-  text-align: center !important;
   line-height: 22px !important;
   font-weight: 500 !important;
   font-size: 14px !important;
   font-style: bold !important;
 }
 
+table td:first-child {
+  text-align: center !important;
+}
+
+table td:nth-child(8) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
 table td:nth-child(2) {
   text-align: left !important;
+  padding-left: 0 !important;
+}
+
+table td:nth-child(3) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+table td:nth-child(4) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+table td:nth-child(5) {
+  padding-left: 0 !important;
 }
 
 table td:nth-child(8) {
@@ -830,6 +854,10 @@ table tr:nth-child(even) {
   border: none;
 }
 
+.mr-24 {
+  margin-right: 24px;
+}
+
 .flex-1 {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -838,9 +866,9 @@ table tr:nth-child(even) {
 }
 
 .flex-half {
-  -webkit-box-flex: 0.2;
-      -ms-flex: 0.2;
-          flex: 0.2;
+  -webkit-box-flex: 0.1;
+      -ms-flex: 0.1;
+          flex: 0.1;
 }
 
 .row {
@@ -964,23 +992,132 @@ p.title_lg {
 }
 
 .selection {
+  margin-top: 1rem;
   z-index: 10 !important;
 }
 
-.selection .ant-select {
+.ant-select {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100% !important;
 }
 
-.selection .ant-select-selector {
+.ant-select .ant-select-selector {
   padding: 0 !important;
+  background-color: #f1f4f8 !important;
+  border: none !important;
   border-radius: 8px !important;
 }
 
-.selection .ant-select-selector span {
+.ant-select .ant-select-selector span {
   padding: 0 16px !important;
+}
+
+.ant-select-selection-item {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #7c7d95 !important;
+}
+
+.ant-select-arrow {
+  color: #ff993c !important;
+  font-size: 14px !important;
+}
+
+.container-table table {
+  width: 100%;
+  border-spacing: 0rem;
+  white-space: nowrap;
+}
+
+.container-table table .ant-table-cell {
+  border: none !important;
+}
+
+.container-table table th {
+  text-align: center;
+  border: none !important;
+  padding: 0.5rem 1.5rem 0.5rem 0 !important;
+  border-bottom: none !important;
+  font-size: 16px !important;
+  font-style: bold !important;
+  font-weight: 600 !important;
+  line-height: 30px !important;
+}
+
+.container-table table th::before {
+  display: none !important;
+}
+
+.container-table table th:first-child {
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px 0 0 !important;
+}
+
+.container-table table th:nth-child(3) {
+  text-align: left !important;
+}
+
+.container-table table th:nth-child(4) {
+  text-align: left !important;
+}
+
+.container-table table th:last-child {
+  padding: 0.5rem 1rem !important;
+  border-radius: 0 8px 0 !important;
+}
+
+.container-table table td {
+  padding: 1rem !important;
+  line-height: 22px !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  font-style: bold !important;
+}
+
+.container-table table td:first-child {
+  text-align: center !important;
+}
+
+.container-table table td:nth-child(8) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(2) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(3) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(4) {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(5) {
+  padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(8) {
+  text-align: left !important;
+}
+
+.container-table table td:nth-child(6) {
+  text-align: right !important;
+}
+
+.container-table table td:nth-child(7) {
+  text-align: right !important;
+}
+
+.container-table table tr:nth-child(even) {
+  background-color: #f7f8fb;
 }
 
 @media (max-width: 768px) {
