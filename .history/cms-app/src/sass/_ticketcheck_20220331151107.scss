@@ -92,16 +92,6 @@ p.title_lg {
   background-color: transparent;
 }
 .selection {
-  z-index: 10 !important;
-  .ant-select {
-    display: flex;
-    width: 100% !important;
-  }
-  .ant-select-selector {
-    padding: 0 !important;
-    border-radius: 8px !important;
-    span {
-      padding: 0 16px !important;
-    }
-  }
+  margin: 0;
+  width: 100% !important;
 }

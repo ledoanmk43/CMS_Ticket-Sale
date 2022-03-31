@@ -838,9 +838,9 @@ table tr:nth-child(even) {
 }
 
 .flex-half {
-  -webkit-box-flex: 0.3;
-      -ms-flex: 0.3;
-          flex: 0.3;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
 }
 
 .row {
@@ -961,6 +961,26 @@ p.title_lg {
   font-size: 14px;
   cursor: pointer;
   background-color: transparent;
+}
+
+.selection {
+  z-index: 10 !important;
+}
+
+.selection .ant-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100% !important;
+}
+
+.selection .ant-select-selector {
+  padding: 0 !important;
+  border-radius: 8px !important;
+}
+
+.selection .ant-select-selector span {
+  padding: 0 16px !important;
 }
 
 @media (max-width: 768px) {
@@ -1156,7 +1176,11 @@ html {
 body {
   font-family: var(--primary-font) !important;
   background-color: var(--background-color);
-  overflow: hidden;
+  overflow-x: hidden;
   /* Hide scrollbars */
+}
+
+button {
+  cursor: pointer;
 }
 /*# sourceMappingURL=index.css.map */

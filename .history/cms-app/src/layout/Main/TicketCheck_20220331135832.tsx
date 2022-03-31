@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useRef } from 'react'
-import { SearchOutlined } from '@ant-design/icons'
-import { FiFilter } from 'react-icons/fi'
-import { GoPrimitiveDot } from 'react-icons/go'
+import React, { useState, useEffect, useRef } from 'react';
+import { SearchOutlined } from '@ant-design/icons';
+import { FiFilter } from 'react-icons/fi';
+import { GoPrimitiveDot } from 'react-icons/go';
 
-import { Table, Modal, Checkbox, DatePicker, Select } from 'antd'
-import moment from 'moment'
-const CheckboxGroup = Checkbox.Group
+import { Table, Modal, Checkbox, DatePicker } from 'antd';
+import moment from 'moment';
+const CheckboxGroup = Checkbox.Group;
 
-const plainOptionsStatus: string[] = ['Chưa đối soát', 'Đã đối soát']
-const defaultCheckedListStatus = ['Chưa đối soát']
+const plainOptionsStatus: string[] = ['Chưa đối soát', 'Đã đối soát'];
+const defaultCheckedListStatus = ['Chưa đối soát'];
 
 export interface ITicketCheckProps {}
 
@@ -43,24 +43,24 @@ const columns = [
     title: '',
     dataIndex: 'checkingStatus',
     render: (status: string) => {
-      let color = ''
-      let statusName = ''
-      let opacity = ''
+      let color = '';
+      let statusName = '';
+      let opacity = '';
       switch (status) {
         case 'Chưa đối soát':
-          color = '#A5A8B1'
-          statusName = 'Chưa đối soát'
-          opacity = '0.8'
-          break
+          color = '#A5A8B1';
+          statusName = 'Chưa đối soát';
+          opacity = '0.8';
+          break;
         case 'Đã đối soát':
-          color = '#03AC00'
-          opacity = '1'
-          statusName = 'Đã đối soát'
-          break
+          color = '#03AC00';
+          opacity = '1';
+          statusName = 'Đã đối soát';
+          break;
         default:
-          color = '#A5A8B1'
-          statusName = 'Chưa đối soát'
-          opacity = '0.8'
+          color = '#A5A8B1';
+          statusName = 'Chưa đối soát';
+          opacity = '0.8';
       }
       return (
         <div
@@ -72,10 +72,10 @@ const columns = [
         >
           {statusName}
         </div>
-      )
+      );
     },
   },
-]
+];
 
 const data = [
   {
@@ -158,31 +158,31 @@ const data = [
     gate: 'Cổng 1',
     checkingStatus: 'Chưa đối soát',
   },
-]
-const { Option } = Select
+];
+
 const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
-  const [page, setPage] = useState<number>(1)
-  const [pageSize, setPageSize] = useState<number>(4)
+  const [page, setPage] = useState<number>(1);
+  const [pageSize, setPageSize] = useState<number>(4);
   // const [isOpenModal, setIsOpenModal] = useState<boolean>(false)
   const [checkedListStatus, setCheckedListStatus] = useState(
     defaultCheckedListStatus
-  )
-  const [indeterminateStatus, setIndeterminateStatus] = useState(true)
-  const [checkAllStatus, setCheckAllStatus] = useState(false)
+  );
+  const [indeterminateStatus, setIndeterminateStatus] = useState(true);
+  const [checkAllStatus, setCheckAllStatus] = useState(false);
   // Status Checking
   const onChangeStatus = (list: any) => {
-    setCheckedListStatus(list)
+    setCheckedListStatus(list);
     setIndeterminateStatus(
       !!list.length && list.length < plainOptionsStatus.length
-    )
-    setCheckAllStatus(list.length === plainOptionsStatus.length)
-  }
+    );
+    setCheckAllStatus(list.length === plainOptionsStatus.length);
+  };
 
   const onCheckAllChangeStatus = (e: any) => {
-    setCheckedListStatus(e.target.checked ? plainOptionsStatus : [])
-    setIndeterminateStatus(false)
-    setCheckAllStatus(e.target.checked)
-  }
+    setCheckedListStatus(e.target.checked ? plainOptionsStatus : []);
+    setIndeterminateStatus(false);
+    setCheckAllStatus(e.target.checked);
+  };
 
   return (
     <div className='row'>
@@ -212,8 +212,8 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
               current: page,
               pageSize: pageSize,
               onChange: (page, pageSize) => {
-                setPage(page)
-                setPageSize(pageSize)
+                setPage(page);
+                setPageSize(pageSize);
               },
             }}
           ></Table>
@@ -222,13 +222,6 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
       <div className='main flex-half hide'>
         <div className='container'>
           <p className='title_lg'> Lọc vé</p>
-          <div className=' selection'>
-            <Select defaultValue='lucy'>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-            </Select>
-          </div>
           <div className='section-col'>
             <div className='section flex-start'>
               <p className='heading-base'>Tình trạng đối soát</p>
@@ -282,7 +275,7 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default TicketCheck
+export default TicketCheck;

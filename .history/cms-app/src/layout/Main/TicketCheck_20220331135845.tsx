@@ -3,7 +3,7 @@ import { SearchOutlined } from '@ant-design/icons'
 import { FiFilter } from 'react-icons/fi'
 import { GoPrimitiveDot } from 'react-icons/go'
 
-import { Table, Modal, Checkbox, DatePicker, Select } from 'antd'
+import { Table, Modal, Checkbox, DatePicker } from 'antd'
 import moment from 'moment'
 const CheckboxGroup = Checkbox.Group
 
@@ -159,7 +159,7 @@ const data = [
     checkingStatus: 'Chưa đối soát',
   },
 ]
-const { Option } = Select
+
 const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
   const [page, setPage] = useState<number>(1)
   const [pageSize, setPageSize] = useState<number>(4)
@@ -222,13 +222,6 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
       <div className='main flex-half hide'>
         <div className='container'>
           <p className='title_lg'> Lọc vé</p>
-          <div className=' selection'>
-            <Select defaultValue='lucy'>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-            </Select>
-          </div>
           <div className='section-col'>
             <div className='section flex-start'>
               <p className='heading-base'>Tình trạng đối soát</p>

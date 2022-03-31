@@ -222,14 +222,17 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
       <div className='main flex-half hide'>
         <div className='container'>
           <p className='title_lg'> Lọc vé</p>
-          <div className=' selection'>
-            <Select defaultValue='lucy'>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-              <Option value='hello'>hello</Option>
-            </Select>
-          </div>
           <div className='section-col'>
+            <div className='section'>
+              <Select defaultValue='lucy' style={{ width: 120 }}>
+                <Option value='hello'>hello</Option>
+                <Option value='hello'>hello</Option>
+                <Option value='hello' disabled>
+                  Disabled
+                </Option>
+                <Option value='hello'>hello</Option>
+              </Select>
+            </div>
             <div className='section flex-start'>
               <p className='heading-base'>Tình trạng đối soát</p>
               <div className='content'>

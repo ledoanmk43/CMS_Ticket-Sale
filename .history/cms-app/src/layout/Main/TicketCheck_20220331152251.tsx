@@ -226,6 +226,9 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (props) => {
             <Select defaultValue='lucy'>
               <Option value='hello'>hello</Option>
               <Option value='hello'>hello</Option>
+              <Option value='hello' disabled>
+                Disabled
+              </Option>
               <Option value='hello'>hello</Option>
             </Select>
           </div>

@@ -2,11 +2,11 @@
   border: none;
 }
 .flex-1 {
-  flex: 1;
+  flex: 1.2;
   margin-right: 32px;
 }
 .flex-half {
-  flex: 0.2;
+  flex: 0.3;
 }
 .row {
   display: flex;
@@ -90,18 +90,4 @@ p.title_lg {
   font-size: $text-sm;
   cursor: pointer;
   background-color: transparent;
-}
-.selection {
-  z-index: 10 !important;
-  .ant-select {
-    display: flex;
-    width: 100% !important;
-  }
-  .ant-select-selector {
-    padding: 0 !important;
-    border-radius: 8px !important;
-    span {
-      padding: 0 16px !important;
-    }
-  }
 }

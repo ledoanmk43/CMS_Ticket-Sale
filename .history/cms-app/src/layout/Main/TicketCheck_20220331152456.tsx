@@ -80,7 +80,7 @@ const columns = [
 const data = [
   {
     id: '1',
-    ticketId: '1234',
+    ticketId: '12342222222211111111',
     dateUse: Date.now(),
     ticketTypeName: 'Vé cổng',
     gate: 'Cổng 1',

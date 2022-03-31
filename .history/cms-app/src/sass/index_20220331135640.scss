@@ -26,7 +26,7 @@ body {
   font-family: var(--primary-font) !important;
   background-color: var(--background-color);
 
-  overflow-x: hidden; /* Hide scrollbars */
+  overflow: hidden; /* Hide scrollbars */
 }
 button {
   cursor: pointer;
