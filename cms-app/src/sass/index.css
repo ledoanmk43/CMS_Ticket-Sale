@@ -124,7 +124,6 @@ h6 {
   display: flex;
   right: 0;
   margin: auto;
-  margin-right: 32px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -262,7 +261,7 @@ h6 {
   background-color: #f9f6f4;
 }
 
-.container {
+.wrapper-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -270,6 +269,8 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100%;
+  margin-right: 32px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -284,10 +285,11 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
+  width: 100%;
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
-  margin: 0 32px 32px 0;
+  margin: 0 0 32px 0;
 }
 
 .container {
@@ -477,7 +479,6 @@ h6 {
 table {
   width: 100%;
   border-spacing: 0rem;
-  width: 100%;
   white-space: nowrap;
 }
 
@@ -488,7 +489,7 @@ table .ant-table-cell {
 table th {
   text-align: center !important;
   border: none !important;
-  padding: 0.5rem 1rem !important;
+  padding: 0.5rem 0.5rem !important;
   border-bottom: none !important;
   font-size: 16px !important;
   font-style: bold !important;
@@ -504,6 +505,14 @@ table th:first-child {
   border-radius: 8px 0 0 !important;
 }
 
+table th:nth-child(3) {
+  text-align: left !important;
+}
+
+table th:nth-child(4) {
+  text-align: left !important;
+}
+
 table th:last-child {
   border-radius: 0 8px 0 !important;
 }
@@ -515,6 +524,22 @@ table td {
   font-weight: 500 !important;
   font-size: 14px !important;
   font-style: bold !important;
+}
+
+table td:nth-child(2) {
+  text-align: left !important;
+}
+
+table td:nth-child(8) {
+  text-align: left !important;
+}
+
+table td:nth-child(6) {
+  text-align: right !important;
+}
+
+table td:nth-child(7) {
+  text-align: right !important;
 }
 
 table tr:nth-child(even) {
@@ -809,6 +834,7 @@ table tr:nth-child(even) {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  margin-right: 32px;
 }
 
 .flex-half {
@@ -1130,5 +1156,7 @@ html {
 body {
   font-family: var(--primary-font) !important;
   background-color: var(--background-color);
+  overflow: hidden;
+  /* Hide scrollbars */
 }
 /*# sourceMappingURL=index.css.map */
