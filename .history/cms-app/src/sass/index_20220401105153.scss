@@ -1,0 +1,48 @@
+@import './reset';
+@import './variables';
+@import './header';
+@import './sidebar';
+@import './main';
+@import './dashboard';
+@import './ticketmanagement';
+@import './ticketcheck';
+@import './servicepack';
+@import './responsive';
+@import './calendar';
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  // coloring
+  --primary-color: #ffb800;
+  --background-color: #f9f6f4;
+  --primary-font: 'Montserrat';
+}
+#root {
+  background-color: var(--background-color);
+}
+body {
+  font-family: var(--primary-font) !important;
+  background-color: var(--background-color);
+
+  overflow-x: hidden; /* Hide scrollbars */
+}
+button {
+  cursor: pointer;
+}
+.col {
+  display: flex !important;
+  flex-direction: column !important;
+  .start {
+    align-items: flex-start !important;
+  }
+}
+.row {
+  display: flex;
+  height: 100%;
+  margin: 0 0 32px 0;
+}
+.pr-4rem {
+  padding-right: 6.3rem !important;
+}
