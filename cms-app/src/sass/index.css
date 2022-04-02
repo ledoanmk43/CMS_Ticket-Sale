@@ -257,7 +257,7 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100vh;
+  max-height: 100%;
   background-color: #f9f6f4;
 }
 
@@ -269,7 +269,10 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh !important;
   margin-right: 32px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -280,6 +283,7 @@ h6 {
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
+  min-height: auto;
   margin: 0 0 32px 0;
 }
 
@@ -323,8 +327,12 @@ h6 {
           align-items: center !important;
 }
 
-.pr-6rem {
-  padding-right: 6.3rem !important;
+.h-base {
+  min-height: 632px !important;
+}
+
+.pr-3rem {
+  padding-right: 3.1rem !important;
 }
 
 .h-auto {
@@ -343,8 +351,18 @@ h6 {
   margin-top: 1rem !important;
 }
 
+.mt-3rem {
+  margin-top: 2.3rem !important;
+}
+
 .mr-24 {
   margin-right: 24px;
+}
+
+.start {
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
 }
 
 .container {
@@ -356,15 +374,6 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #1e0d03;
-}
-
-.container p.title_xl {
-  color: inherit;
-  font-size: 36px;
-  font-style: bold;
-  font-weight: 700;
-  line-height: 54px;
-  margin-bottom: 0.5rem;
 }
 
 .container-revenue {
@@ -386,6 +395,15 @@ h6 {
   margin: 1rem 0;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 160, 95, 0.26)), color-stop(141.68%, rgba(255, 255, 255, 0)));
   background: linear-gradient(180deg, rgba(250, 160, 95, 0.26) 0%, rgba(255, 255, 255, 0) 141.68%);
+}
+
+p.title_xl {
+  color: inherit;
+  font-size: 36px;
+  font-style: bold;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom: 0.5rem;
 }
 
 .title {

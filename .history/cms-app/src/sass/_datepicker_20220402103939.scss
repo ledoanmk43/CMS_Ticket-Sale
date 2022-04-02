@@ -1,0 +1,156 @@
+@use "../../scss/" as *;
+
+.date-picker {
+  width: 143px;
+  position: relative;
+  &__input {
+    @include flex(center, center);
+    width: 143px;
+    height: 40px;
+    padding: 8px 46px 8px 12px;
+    border: 1px solid #a5a8b1;
+    border-radius: 8px;
+    outline: none;
+    position: relative;
+  }
+  &__btn {
+    @include flex(center, center);
+    border: none;
+    background: #fff;
+    position: absolute;
+    top: 8px;
+    right: 14px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3 ease-in-out;
+    :hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.calendar {
+  width: 370px;
+  height: 392px;
+  padding: 24px 32px;
+  background: #ffffff;
+  box-shadow: 4px 4px 45px rgba(109, 46, 0, 0.35);
+  border-radius: 20px;
+  position: absolute;
+  z-index: 999999999;
+
+  &-header {
+    @include flex(center, static);
+    margin-bottom: 16px;
+    &__title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      margin: 0 16px;
+    }
+  }
+  &-container {
+    @include flex(flex-end, space-between);
+    margin-bottom: 20px;
+    &__control {
+      display: flex;
+      align-items: center;
+      &__input {
+        height: 16px;
+        width: 16px;
+      }
+      &__title {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &-table {
+    width: 320px;
+    height: 266px;
+    margin: 16px 0px;
+
+    &__row-weeks {
+      width: 46px;
+      color: #c55e00;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+    }
+    &__row-day {
+      height: 47px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+.date {
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 0.2s ease;
+
+  :hover {
+    opacity: 0.4;
+  }
+}
+
+.active-date {
+  color: #fff;
+  background-color: #ffd2a8;
+}
+
+.active-date td:nth-child(1) {
+  background-color: #ffd2a8;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: relative;
+}
+.active-date td:nth-child(1)::before {
+  content: "";
+  position: absolute;
+  height: 47px;
+  width: 47px;
+  background-color: #ffba7b;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+}
+.active-date td:nth-child(7) {
+  background-color: #ffd2a8;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  position: relative;
+}
+.active-date td:nth-child(7)::before {
+  content: "";
+  position: absolute;
+  height: 47px;
+  width: 47px;
+  background-color: #ffba7b;
+  top: 0;
+  left: 5px;
+  border-radius: 50%;
+}
+
+.active-day {
+  color: $txt-white;
+  background: #ffba7b;
+  border-radius: 50%;
+}
+.isactive-day {
+  color: #23221f;
+
+  opacity: 0.3;
+}
