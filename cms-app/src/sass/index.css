@@ -269,10 +269,8 @@ h6 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  min-height: 100vh !important;
+  max-height: 100%;
+  min-height: 100vh;
   margin-right: 32px;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -283,14 +281,13 @@ h6 {
   background: #ffffff;
   border-radius: 24px;
   padding: 24px;
-  min-height: auto;
   margin: 0 0 32px 0;
 }
 
 .col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   height: 100%;
   -webkit-box-orient: vertical !important;
   -webkit-box-direction: normal !important;
@@ -311,6 +308,15 @@ h6 {
           align-items: flex-start !important;
 }
 
+.col-center {
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+}
+
 .row {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -327,12 +333,16 @@ h6 {
           align-items: center !important;
 }
 
+.mr-30 {
+  margin-right: 30rem !important;
+}
+
 .h-base {
   min-height: 632px !important;
 }
 
 .pr-3rem {
-  padding-right: 3.1rem !important;
+  padding-right: 3.9rem !important;
 }
 
 .h-auto {
@@ -343,8 +353,8 @@ h6 {
   margin-left: 2rem !important;
 }
 
-.mt-5rem {
-  margin-top: 5rem !important;
+.mt-6rem {
+  margin-top: 6rem !important;
 }
 
 .mt-1rem {
