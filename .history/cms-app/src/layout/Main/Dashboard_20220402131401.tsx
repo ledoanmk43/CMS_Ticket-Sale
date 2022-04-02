@@ -19,19 +19,20 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
   const [isCalendarOpen, setIsCalendarOpen] = useState<boolean>(false)
 
   //area chart
-  const [dataArea, setDataArea] = useState([])
+  const [data, setData] = useState([])
   const asyncFetch = async () => {
     await fetch(
       'https://gw.alipayobjects.com/os/bmw-prod/360c3eae-0c73-46f0-a982-4746a6095010.json'
     )
       .then((response) => response.json())
-      .then((json) => setDataArea(json))
+      .then((json) => setData(json))
       .catch((error) => {
         console.log('fetch data failed', error)
       })
   }
+
   const configArea = {
-    data: dataArea,
+    data,
     xField: 'timePeriod',
     yField: 'value',
     xAxis: {
@@ -49,20 +50,21 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
       cursor: 'pointer',
     },
     line: {
-      size: 3,
+      size: ,
     },
     color: '#f7a156',
   }
 
   //donut chart
   const chartRef: any = useRef(null)
-  const [dataDoughnut, setDataDoughnut] = useState<any>({
+  const [chartData, setChartData] = useState<any>({
     datasets: [],
   })
 
   useEffect(() => {
-    setDataDoughnut({
-      labels: [],
+    asyncFetch()
+    setChartData({
+      labels: ['Vé chưa sử dụng', 'Vé đã sử dụng'],
       datasets: [
         {
           data: [40, 60],
@@ -70,7 +72,6 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
         },
       ],
     })
-    asyncFetch()
   }, [])
   return (
     <div className='main col '>
@@ -123,30 +124,22 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
             )}
             <div className='row'>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{
-                    padding: '0 14rem 0.5rem 14rem',
-                  }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói gia đình
                 </p>
                 <Doughnut
                   ref={chartRef}
-                  data={dataDoughnut}
+                  data={chartData}
                   style={{ maxHeight: '200px' }}
                 />
               </div>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{ padding: '0 14rem 0.5rem 14rem' }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói sự kiện
                 </p>
                 <Doughnut
                   ref={chartRef}
-                  data={dataDoughnut}
+                  data={chartData}
                   style={{ maxHeight: '200px' }}
                 />
               </div>

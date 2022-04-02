@@ -20,16 +20,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
 
   //area chart
   const [dataArea, setDataArea] = useState([])
-  const asyncFetch = async () => {
-    await fetch(
-      'https://gw.alipayobjects.com/os/bmw-prod/360c3eae-0c73-46f0-a982-4746a6095010.json'
-    )
-      .then((response) => response.json())
-      .then((json) => setDataArea(json))
-      .catch((error) => {
-        console.log('fetch data failed', error)
-      })
-  }
+
   const configArea = {
     data: dataArea,
     xField: 'timePeriod',
@@ -61,8 +52,19 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
   })
 
   useEffect(() => {
+    const asyncFetch = async () => {
+      await fetch(
+        'https://gw.alipayobjects.com/os/bmw-prod/360c3eae-0c73-46f0-a982-4746a6095010.json'
+      )
+        .then((response) => response.json())
+        .then((json) => setDataArea(json))
+        .catch((error) => {
+          console.log('fetch data failed', error)
+        })
+    }
+    asyncFetch()
     setDataDoughnut({
-      labels: [],
+      labels: ['Vé chưa sử dụng', 'Vé đã sử dụng'],
       datasets: [
         {
           data: [40, 60],
@@ -70,8 +72,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
         },
       ],
     })
-    asyncFetch()
-  }, [])
+  }, [dataArea, dataDoughnut])
   return (
     <div className='main col '>
       <div className='container pr-3rem'>
@@ -123,12 +124,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
             )}
             <div className='row'>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{
-                    padding: '0 14rem 0.5rem 14rem',
-                  }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói gia đình
                 </p>
                 <Doughnut
@@ -138,10 +134,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
                 />
               </div>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{ padding: '0 14rem 0.5rem 14rem' }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói sự kiện
                 </p>
                 <Doughnut

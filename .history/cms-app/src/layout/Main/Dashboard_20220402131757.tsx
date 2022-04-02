@@ -30,6 +30,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
         console.log('fetch data failed', error)
       })
   }
+
   const configArea = {
     data: dataArea,
     xField: 'timePeriod',
@@ -56,13 +57,14 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
 
   //donut chart
   const chartRef: any = useRef(null)
-  const [dataDoughnut, setDataDoughnut] = useState<any>({
+  const [chartData, setChartData] = useState<any>({
     datasets: [],
   })
 
   useEffect(() => {
-    setDataDoughnut({
-      labels: [],
+    asyncFetch()
+    setChartData({
+      labels: ['Vé chưa sử dụng', 'Vé đã sử dụng'],
       datasets: [
         {
           data: [40, 60],
@@ -70,7 +72,6 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
         },
       ],
     })
-    asyncFetch()
   }, [])
   return (
     <div className='main col '>
@@ -123,30 +124,22 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
             )}
             <div className='row'>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{
-                    padding: '0 14rem 0.5rem 14rem',
-                  }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói gia đình
                 </p>
                 <Doughnut
                   ref={chartRef}
-                  data={dataDoughnut}
+                  data={chartData}
                   style={{ maxHeight: '200px' }}
                 />
               </div>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{ padding: '0 14rem 0.5rem 14rem' }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói sự kiện
                 </p>
                 <Doughnut
                   ref={chartRef}
-                  data={dataDoughnut}
+                  data={chartData}
                   style={{ maxHeight: '200px' }}
                 />
               </div>

@@ -124,9 +124,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
             <div className='row'>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
                 <p
-                  style={{
-                    padding: '0 14rem 0.5rem 14rem',
-                  }}
+                  style={{ padding: '0 14rem', marginBottom: '2rem' }}
                   className='title'
                 >
                   Gói gia đình
@@ -138,10 +136,7 @@ const Dashboard: React.FunctionComponent<IDashboardProps> = (props) => {
                 />
               </div>
               <div className='col-center' style={{ backgroundColor: 'white' }}>
-                <p
-                  style={{ padding: '0 14rem 0.5rem 14rem' }}
-                  className='title'
-                >
+                <p style={{ padding: '0 14rem' }} className='title'>
                   Gói sự kiện
                 </p>
                 <Doughnut
