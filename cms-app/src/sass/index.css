@@ -68,6 +68,10 @@ h6 {
   background-color: #f9f6f4;
   font-size: 16px;
   color: #1e0d03;
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 10;
+  top: 0;
 }
 
 .header-search {
@@ -167,6 +171,9 @@ h6 {
       -ms-flex-align: start;
           align-items: flex-start;
   padding: 0px;
+  position: -webkit-sticky;
+  position: sticky;
+  max-height: 100vh;
   min-width: 252px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -204,7 +211,7 @@ h6 {
           flex-direction: column;
   top: 23.1%;
   max-width: 252px;
-  width: 80%;
+  width: 100%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
@@ -978,6 +985,32 @@ table tr:nth-child(even) {
   margin-bottom: -1px !important;
 }
 
+.menu,
+.ant-dropdown-arrow,
+.ant-dropdown-arrow::before {
+  background-color: #ffd2a8 !important;
+  background: #ffd2a8 !important;
+}
+
+.ant-menu {
+  padding: 0 !important;
+  border-radius: 8px !important;
+}
+
+.ant-menu .ant-menu::before {
+  background-color: #ffd2a8 !important;
+}
+
+.ant-menu-item {
+  background-color: #ffd2a8 !important;
+  border-radius: 9px !important;
+  margin: 0 !important;
+}
+
+.ant-menu-item-selected, .ant-menu-item:hover {
+  color: #fff !important;
+}
+
 .border-none {
   border: none;
 }
@@ -1198,10 +1231,14 @@ p.title_lg {
 
 .container-table table th:nth-child(4) {
   text-align: right !important;
+  padding-left: 0 !important;
+  max-width: 90px !important;
 }
 
 .container-table table th:nth-child(5) {
   text-align: right !important;
+  padding-left: 0 !important;
+  max-width: 90px !important;
 }
 
 .container-table table th:nth-child(6) {
@@ -1209,7 +1246,13 @@ p.title_lg {
 }
 
 .container-table table th:nth-child(7) {
-  text-align: right !important;
+  text-align: left !important;
+  max-width: 210px !important;
+}
+
+.container-table table th:nth-child(8) {
+  text-align: left !important;
+  padding-left: 1rem !important;
 }
 
 .container-table table th:last-child {
@@ -1218,7 +1261,6 @@ p.title_lg {
 }
 
 .container-table table td {
-  padding: 1rem !important;
   line-height: 22px !important;
   font-weight: 500 !important;
   font-size: 14px !important;
@@ -1247,23 +1289,31 @@ p.title_lg {
 .container-table table td:nth-child(4) {
   text-align: right !important;
   padding-right: 1.5rem !important;
+  white-space: normal !important;
+  max-width: 130px !important;
 }
 
 .container-table table td:nth-child(5) {
   text-align: right !important;
   padding-right: 1.5rem !important;
+  white-space: normal !important;
+  max-width: 130px !important;
 }
 
 .container-table table td:nth-child(8) {
   text-align: left !important;
+  padding-left: 1rem !important;
 }
 
 .container-table table td:nth-child(6) {
   text-align: right !important;
+  padding-right: 0.5rem !important;
 }
 
 .container-table table td:nth-child(7) {
-  text-align: right !important;
+  text-align: left !important;
+  max-width: 50% !important;
+  padding-left: 0 !important;
 }
 
 .container-table table tr:nth-child(even) {
