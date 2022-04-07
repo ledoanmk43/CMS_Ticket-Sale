@@ -256,7 +256,7 @@ h6 {
 }
 
 .sub {
-  margin-left: 4rem;
+  margin-left: 4.5rem;
   text-decoration: none;
   width: 70%;
   background-color: transparent;
@@ -1007,6 +1007,7 @@ table tr:nth-child(even) {
 .menu,
 .ant-dropdown-arrow,
 .ant-dropdown-arrow::before {
+  border-top-left-radius: 100% !important;
   background-color: #ffd2a8 !important;
   background: #ffd2a8 !important;
 }
@@ -1021,9 +1022,11 @@ table tr:nth-child(even) {
 }
 
 .ant-menu-item {
+  height: 30px !important;
   background-color: #ffd2a8 !important;
   border-radius: 9px !important;
   margin: 0 !important;
+  line-height: 30px !important;
 }
 
 .ant-menu-item-selected, .ant-menu-item:hover {

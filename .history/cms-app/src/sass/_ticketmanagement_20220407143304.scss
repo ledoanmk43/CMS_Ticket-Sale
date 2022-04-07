@@ -397,12 +397,12 @@ table {
 .menu,
 .ant-dropdown-arrow,
 .ant-dropdown-arrow::before {
-  border-top-left-radius: 100% !important;
   background-color: #ffd2a8 !important;
   background: #ffd2a8 !important;
 }
 
 .ant-menu {
+  height: 50px !important;
   padding: 0 !important;
   border-radius: 8px !important;
   .ant-menu::before {
@@ -411,11 +411,9 @@ table {
 }
 
 .ant-menu-item {
-  height: 30px !important;
   background-color: #ffd2a8 !important;
   border-radius: 9px !important;
   margin: 0 !important;
-  line-height: 30px !important;
   &-selected,
   &:hover {
     color: #fff !important;
