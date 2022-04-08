@@ -1,0 +1,92 @@
+.sidebar {
+  display: flex;
+  flex: 0.2;
+  left: 0;
+  top: 0;
+  margin: 0 0 0 32px;
+  flex-direction: column;
+  background-color: $backgroundColor;
+  align-items: flex-start;
+  padding: 0px;
+  position: sticky;
+  max-height: 100vh;
+  min-width: 252px;
+  justify-content: space-between;
+  &-logo {
+    // position: absolute;
+    margin-top: 17px;
+    height: 58px;
+    width: 133px;
+    cursor: pointer;
+  }
+  &-copyright {
+    // position: absolute;
+    // bottom: 2rem;
+    margin-bottom: 2rem !important;
+    margin: 0 auto;
+    opacity: 0.5;
+    &-cpr {
+      margin-left: -32px !important;
+      font-size: $text-sm;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  &-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 23.1%;
+    // left: 7.5%;
+    max-width: 252px;
+    width: 100%;
+    align-items: flex-start;
+    align-content: center;
+    &-item {
+      color: inherit;
+      font-size: $text-md;
+      padding: 14px 30px 14px 20px;
+      border-radius: 8px;
+      white-space: nowrap;
+      line-height: 26px;
+      opacity: 0.6;
+      width: 85%;
+      align-items: center;
+      display: flex;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+        // background-color: $primary-color;
+        color: inherit;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.active {
+  opacity: 1;
+  background-color: $primary-color;
+  color: white;
+  font-weight: bold !important;
+  &:hover {
+    opacity: 0.7;
+    color: white !important;
+  }
+}
+.sub {
+  margin-left: 4.5rem;
+  text-decoration: none;
+  width: 70%;
+  background-color: transparent;
+  color: inherit;
+  &:hover {
+    opacity: 0.7;
+    color: inherit !important;
+  }
+  &-hidden {
+    display: none;
+  }
+}
+.icon {
+  margin-right: 10px;
+}
