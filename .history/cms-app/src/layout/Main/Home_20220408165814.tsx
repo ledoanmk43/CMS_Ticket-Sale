@@ -11,11 +11,14 @@ import { db } from '../../App'
 export interface IHomeProps {}
 export interface Packages {
   id: number
+  bookingId: string
   packageId: string
-  packageName: string
+  eventName: string
+  status: string
   dateBegin: Date
   dateEnd: Date
   packageStatus: boolean
+  gate?: string
   comboPrice: number
   ticketPrice: number
 }

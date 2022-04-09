@@ -13,6 +13,7 @@ export interface Packages {
   id: number
   packageId: string
   packageName: string
+
   dateBegin: Date
   dateEnd: Date
   packageStatus: boolean

@@ -9,15 +9,17 @@ import TicketManage from './TicketManage'
 import { collection, getDocs, onSnapshot } from 'firebase/firestore'
 import { db } from '../../App'
 export interface IHomeProps {}
-export interface Packages {
+export interface Ticket {
   id: number
-  packageId: string
-  packageName: string
-  dateBegin: Date
-  dateEnd: Date
-  packageStatus: boolean
-  comboPrice: number
-  ticketPrice: number
+  bookingId: string
+  ticketId: string
+  eventName: string
+  status: string
+  dateUse: Date
+  dateRelease: Date
+  checkingStatus: boolean
+  gate?: string
+  price: number
 }
 export interface Ticket {
   id: number

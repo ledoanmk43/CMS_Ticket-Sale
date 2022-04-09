@@ -113,7 +113,7 @@ const columns = [
 ]
 
 export interface IServicePackProps {
-  packagesData: Packages | undefined | any
+  packagesData: Packages | undefined
 }
 
 const ServicePack: React.FunctionComponent<IServicePackProps> = (
@@ -132,7 +132,7 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
     if (debounceSearch) {
       setTableData(
         props.packagesData.filter((item: Packages) =>
-          item.packageName.toLowerCase().includes(debounceSearch.toLowerCase())
+          item.ticketId.includes(debounceSearch)
         )
       )
     }
@@ -169,7 +169,7 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
           className='container-table'
           rowKey='id'
           columns={columns}
-          dataSource={debounceSearch.length ? tableData : props.packagesData}
+          dataSource={props.packagesData}
           pagination={{
             showTitle: false,
             position: ['bottomCenter'],

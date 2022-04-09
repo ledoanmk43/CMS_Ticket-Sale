@@ -9,16 +9,6 @@ import TicketManage from './TicketManage'
 import { collection, getDocs, onSnapshot } from 'firebase/firestore'
 import { db } from '../../App'
 export interface IHomeProps {}
-export interface Packages {
-  id: number
-  packageId: string
-  packageName: string
-  dateBegin: Date
-  dateEnd: Date
-  packageStatus: boolean
-  comboPrice: number
-  ticketPrice: number
-}
 export interface Ticket {
   id: number
   bookingId: string
@@ -31,11 +21,12 @@ export interface Ticket {
   gate?: string
   price: number
 }
+
 const Home: React.FunctionComponent<PropsWithChildren<IHomeProps>> = (
   props
 ) => {
   const [ticketsData, setTicketsData] = useState()
-  const [packagesData, setPackagesData] = useState()
+
   useEffect(() => {
     const getAllTickets = async () => {
       await onSnapshot(collection(db, 'tickets'), (snapshot) => {
@@ -46,7 +37,7 @@ const Home: React.FunctionComponent<PropsWithChildren<IHomeProps>> = (
         setTicketsData(tickets.sort((a: any, b: any) => a.id - b.id))
       })
     }
-    const getAllPacks = async () => {
+    const getAllTickets = async () => {
       await onSnapshot(collection(db, 'ticketpacks'), (snapshot) => {
         const packs: any = []
         snapshot.forEach((doc) => {
@@ -56,7 +47,7 @@ const Home: React.FunctionComponent<PropsWithChildren<IHomeProps>> = (
       })
     }
     getAllTickets()
-    getAllPacks()
+    getAllTickets()
   }, [])
 
   return (
@@ -81,7 +72,7 @@ const Home: React.FunctionComponent<PropsWithChildren<IHomeProps>> = (
           ></Route>
           <Route
             path='service-packages'
-            element={<ServicePack packagesData={packagesData} />}
+            element={<ServicePack ticketsData={ticketsData} />}
           ></Route>
         </Routes>
         {/* </div> */}

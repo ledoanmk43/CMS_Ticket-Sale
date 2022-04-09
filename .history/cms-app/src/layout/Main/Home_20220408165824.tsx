@@ -13,9 +13,11 @@ export interface Packages {
   id: number
   packageId: string
   packageName: string
+  status: string
   dateBegin: Date
   dateEnd: Date
   packageStatus: boolean
+  gate?: string
   comboPrice: number
   ticketPrice: number
 }
