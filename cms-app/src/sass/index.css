@@ -575,11 +575,6 @@ p.title_xl {
   display: flex;
 }
 
-.filter button.export:after {
-  content: '(.csv)';
-  text-indent: 0.5rem;
-}
-
 .btn-ticket {
   display: -webkit-box;
   display: -ms-flexbox;

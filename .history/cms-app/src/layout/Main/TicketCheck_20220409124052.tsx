@@ -79,7 +79,9 @@ const TicketCheck: React.FunctionComponent<ITicketCheckProps> = (
               <SearchOutlined className='header-search-icon' />
             </div>
             <div className='filter'>
-              <button className='btn-ticket'>Chốt đối soát</button>
+              <button onClick={() => setCheckOut(true)} className='btn-ticket'>
+                Chốt đối soát
+              </button>
             </div>
           </div>
           <TableAntd

@@ -10,15 +10,15 @@ import { db } from '../../App'
 import DropdownAntd from '../Components/DropdownAntd'
 import TableAntd from '../Components/TableAntd'
 import useDebounce from '../../hooks/useDebounce'
-import { CSVLink, CSVDownload } from 'react-csv'
+import { CSVLink } from 'react-csv'
 
-const headers = [
+headers = [
   { label: 'First Name', key: 'firstname' },
   { label: 'Last Name', key: 'lastname' },
   { label: 'Email', key: 'email' },
 ]
 
-const data = [
+data = [
   { firstname: 'Ahmed', lastname: 'Tomi', email: 'ah@smthing.co.com' },
   { firstname: 'Raed', lastname: 'Labes', email: 'rl@smthing.co.com' },
   { firstname: 'Yezzi', lastname: 'Min l3b', email: 'ymin@cocococo.com' },
@@ -112,13 +112,7 @@ const TicketManage: React.FunctionComponent<ITicketManageProps> = (
               <FiFilter className='icon' />
               Lọc vé
             </button>
-            <CSVLink
-              data={data}
-              headers={headers}
-              className='btn-ticket export'
-            >
-              Xuất file{' (.csv)'}
-            </CSVLink>
+            <button className='btn-ticket export'>Xuất file </button>
           </div>
         </div>
         <TableAntd

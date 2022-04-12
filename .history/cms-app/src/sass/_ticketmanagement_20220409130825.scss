@@ -41,10 +41,10 @@
 }
 .filter {
   display: flex;
-  // button.export:after {
-  //   content: '(.csv)';
-  //   text-indent: 0.5rem;
-  // }
+  CSVDownload.export:after {
+    content: '(.csv)';
+    text-indent: 0.5rem;
+  }
 }
 .btn-ticket {
   display: flex;

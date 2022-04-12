@@ -119,8 +119,6 @@ const TableAntd: React.FunctionComponent<ITableAntdProps> = (
       render: (record: any) => {
         if (record.status === 'ready') {
           return <DropdownAntd docId={record.id} />
-        } else {
-          return <div style={{ minWidth: '14px' }}></div>
         }
       },
     },

@@ -117,7 +117,7 @@ const TicketManage: React.FunctionComponent<ITicketManageProps> = (
               headers={headers}
               className='btn-ticket export'
             >
-              Xuất file{' (.csv)'}
+              Xuất file{' '}
             </CSVLink>
           </div>
         </div>

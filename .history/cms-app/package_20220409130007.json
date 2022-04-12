@@ -61,7 +61,6 @@
   },
   "devDependencies": {
     "@faker-js/faker": "^6.0.0",
-    "@types/react-csv": "^1.1.2",
     "@types/react-datetime-picker": "^3.4.1"
   }
 }

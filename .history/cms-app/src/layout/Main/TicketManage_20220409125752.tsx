@@ -10,7 +10,7 @@ import { db } from '../../App'
 import DropdownAntd from '../Components/DropdownAntd'
 import TableAntd from '../Components/TableAntd'
 import useDebounce from '../../hooks/useDebounce'
-import { CSVLink, CSVDownload } from 'react-csv'
+import { CSVLink } from 'react-csv'
 
 const headers = [
   { label: 'First Name', key: 'firstname' },
@@ -117,7 +117,7 @@ const TicketManage: React.FunctionComponent<ITicketManageProps> = (
               headers={headers}
               className='btn-ticket export'
             >
-              Xuất file{' (.csv)'}
+              Xuất file{' '}
             </CSVLink>
           </div>
         </div>
