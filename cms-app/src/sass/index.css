@@ -740,12 +740,6 @@ table tr:nth-child(even) {
   width: 100%;
 }
 
-.ant-radio-wrapper {
-  margin-right: 3.1rem !important;
-  font-size: 16px !important;
-  line-height: 20px !important;
-}
-
 .ant-radio-group {
   font-size: 16px !important;
   display: -webkit-box !important;
@@ -758,24 +752,33 @@ table tr:nth-child(even) {
 }
 
 .ant-radio-group .ant-radio-inner {
-  border: 2px solid #27aef9 !important;
   width: 24px;
   height: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 0 !important;
 }
 
 .ant-radio-group .ant-radio-inner span {
   position: absolute;
 }
 
-.ant-radio-group .ant-radio-checked .ant-radio-inner::after {
+.ant-radio-group .ant-radio-checked .ant-radio-inner {
+  border: 2px solid #27aef9 !important;
+}
+
+.ant-radio-group .ant-radio-checked .ant-radio-inner:after {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  opacity: 1 !important;
   width: 30px;
   height: 30px;
-  left: 16%;
+  left: 16.18%;
   top: 16%;
-  position: absolute;
+  z-index: 100 !important;
+  position: absolute !important;
+  background-color: #27aef9 !important;
 }
 
 .ant-radio-group .ant-radio-wrapper {
@@ -785,10 +788,9 @@ table tr:nth-child(even) {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-
-.ant-radio-group .ant-radio-inner {
-  border: 2px solid #27aef9 !important;
+  margin-right: 3.1rem !important;
+  font-size: 16px !important;
+  line-height: 18px !important;
 }
 
 .ant-modal-header {
