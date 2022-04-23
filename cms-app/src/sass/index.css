@@ -400,6 +400,10 @@ h6 {
           align-items: flex-start !important;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -775,7 +779,7 @@ table tr:nth-child(even) {
   width: 30px;
   height: 30px;
   left: 16.18%;
-  top: 16%;
+  top: 15.5%;
   z-index: 100 !important;
   position: absolute !important;
   background-color: #27aef9 !important;
@@ -828,12 +832,63 @@ table tr:nth-child(even) {
           align-items: center !important;
 }
 
-.ant-modal-footer :hover {
+.btn-filter-primary {
+  border: 1px solid #ff993c !important;
+  color: #ff993c !important;
+  background-color: transparent !important;
+  border-radius: 8px !important;
+  padding: 0.7rem 6.7rem !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  font-weight: 600 !important;
+  line-height: 26px !important;
+  font-size: 18px !important;
+  text-shadow: none !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-bottom: 1rem !important;
+}
+
+.btn-filter-primary:hover {
   color: white !important;
   background-color: #ff993c !important;
 }
 
 .ant-btn-primary {
+  border: 1px solid #ff993c !important;
+  color: white !important;
+  background-color: #ff993c !important;
+  border-radius: 8px !important;
+  padding: 2rem 5rem !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  font-weight: 600 !important;
+  line-height: 26px !important;
+  font-size: 18px !important;
+  text-shadow: none !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
+  margin-bottom: 1rem !important;
+  margin-left: 1.2rem !important;
+}
+
+.ant-btn-primary:hover {
+  opacity: 0.8;
+}
+
+.ant-btn-default {
   border: 1px solid #ff993c !important;
   color: #ff993c !important;
   background-color: transparent !important;
@@ -854,14 +909,15 @@ table tr:nth-child(even) {
       -ms-flex-align: center !important;
           align-items: center !important;
   margin-bottom: 1rem !important;
+  margin-right: 1.2rem !important;
 }
 
-.ant-btn-primary span {
-  padding: 0.8rem 153% !important;
+.ant-btn-default span {
+  padding: 0.8rem 136% !important;
   border-radius: 8px !important;
 }
 
-.ant-btn-primary:hover {
+.ant-btn-default:hover {
   color: white !important;
   background-color: #ff993c !important;
 }
@@ -893,7 +949,7 @@ table tr:nth-child(even) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: -2rem;
+  margin-top: 1.8rem;
 }
 
 .from {
@@ -944,9 +1000,8 @@ table tr:nth-child(even) {
   border-radius: 50% !important;
 }
 
-.status,
 .gate {
-  margin-top: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 .flex-half {
@@ -979,6 +1034,7 @@ table tr:nth-child(even) {
 }
 
 .ant-modal-body {
+  height: 100%;
   -webkit-box-pack: justify !important;
       -ms-flex-pack: justify !important;
           justify-content: space-between !important;
@@ -1185,12 +1241,13 @@ p.title_lg {
   display: -ms-flexbox;
   display: flex;
   width: 100% !important;
+  margin-top: 0.5rem !important;
 }
 
 .ant-select .ant-select-selector {
   padding: 0 !important;
-  background-color: #f1f4f8 !important;
-  border: none !important;
+  min-height: 40px !important;
+  border: 1px solid #a5a8b1 !important;
   border-radius: 8px !important;
 }
 
@@ -1200,18 +1257,24 @@ p.title_lg {
 }
 
 .ant-select-selection-item {
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  color: #7c7d95 !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  line-height: 34px !important;
 }
 
 .ant-select-arrow {
   color: #ff993c !important;
-  font-size: 14px !important;
+  font-size: 10px !important;
+  min-width: 16px !important;
+  max-height: 12px !important;
 }
 
 .table-check th:nth-child(3) {
   text-align: right !important;
+}
+
+.table-check td:nth-child(6) {
+  min-width: 144.73px;
 }
 
 .container-table table {
@@ -1337,6 +1400,105 @@ p.title_lg {
 
 .container-table table tr:nth-child(even) {
   background-color: #f7f8fb;
+}
+
+.note {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: -3rem;
+}
+
+.modal .ant-modal-content {
+  height: 600px !important;
+  width: 758px !important;
+}
+
+.modal .ant-modal-footer {
+  height: 120px !important;
+}
+
+.form-input {
+  width: 367px;
+  height: 40px;
+  border: 1px solid #a5a8b1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  padding: 16px;
+  color: #a5a8b1;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.form-input:focus {
+  opacity: 1;
+}
+
+.price-input {
+  margin-left: 8px;
+  max-width: 148px;
+  min-height: 40px;
+  background: #f1f4f8;
+  border-radius: 8px;
+  padding: 12px;
+  opacity: 0.7;
+}
+
+.price-input:focus {
+  opacity: 1;
+}
+
+.price-form {
+  margin-top: -1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 80px !important;
+}
+
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 1rem;
+}
+
+.price p {
+  margin-left: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1e0d03;
+}
+
+.price input[type='checkbox'] {
+  width: 22px;
+  height: 22px;
+  border-radius: 8px;
+  border: 1px solid #27aef9;
+  cursor: pointer;
+}
+
+.ant-picker-panel-container {
+  display: block;
+}
+
+.ant-picker-now {
+  display: none !important;
+}
+
+.ant-picker-ok {
+  margin-left: -1rem !important;
 }
 
 @media (max-width: 768px) {
