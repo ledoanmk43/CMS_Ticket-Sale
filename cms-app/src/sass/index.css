@@ -1366,6 +1366,8 @@ p.title_lg {
 .container-table table td:nth-child(3) {
   text-align: left !important;
   padding-left: 0 !important;
+  white-space: normal !important;
+  max-width: 100px !important;
 }
 
 .container-table table td:nth-child(4) {
@@ -1396,6 +1398,14 @@ p.title_lg {
   text-align: left !important;
   max-width: 50% !important;
   padding-left: 0 !important;
+}
+
+.container-table table td:nth-child(8) {
+  min-width: 190px !important;
+}
+
+.container-table table td:nth-child(9) {
+  min-width: 110px !important;
 }
 
 .container-table table tr:nth-child(even) {
