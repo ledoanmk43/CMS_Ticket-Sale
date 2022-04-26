@@ -124,7 +124,6 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
         return (
           <button
             onClick={() => {
-              setPackageStatusEdit(record.packageStatus)
               setPackUpdate(record)
               setIsOpenModalEdit(true)
             }}
@@ -153,8 +152,8 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
     console.log(time, timeString)
   }
   const options = [
-    { value: true, label: 'Đang áp dụng' },
-    { value: false, label: 'Tắt' },
+    { value: true, label: 'Đã sử dụng' },
+    { value: false, label: 'Chưa sử dụng' },
   ]
   //Add
   const [packageNameAdd, setPackageNameAdd] = useState<any>()
@@ -162,10 +161,10 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
   const [ticketPriceAdd, setTicketPriceAdd] = useState<any>()
   const [comboPriceAdd, setComboPriceAdd] = useState<any>()
   //Edit
-  const [packageNameEdit, setPackageNameEdit] = useState<string>()
-  const [packageStatusEdit, setPackageStatusEdit] = useState<boolean>()
-  const [ticketPriceEdit, setTicketPriceEdit] = useState<number>()
-  const [comboPriceEdit, setComboPriceEdit] = useState<number>()
+  const [packageNameEdit, setPackageNameEdit] = useState<any>()
+  const [packageStatusEdit, setPackageStatusEdit] = useState<any>()
+  const [ticketPriceEdit, setTicketPriceEdit] = useState<any>()
+  const [comboPriceEdit, setComboPriceEdit] = useState<any>()
   const handleAddPack = async () => {
     const docData = {
       id:
@@ -209,14 +208,15 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
           })
         })
 
-        setPackageNameEdit(undefined)
-        setTicketPriceEdit(undefined)
-        setComboPriceEdit(undefined)
-        setPackageStatusEdit(packUpdate.packageStatus)
+        setPackageNameEdit(null)
+        setTicketPriceEdit(null)
+        setComboPriceEdit(null)
+        packageStatusEdit(null)
       }
     } catch (e) {
       console.log(e)
     }
+    setPackUpdate(null)
     setIsOpenModalEdit(false)
   }
 
@@ -394,7 +394,11 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
               <div className='select-status'>
                 <Select
                   options={options}
-                  defaultValue={packUpdate.packageStatus}
+                  value={
+                    packageStatusEdit
+                      ? packageStatusEdit
+                      : packUpdate.packageStatus!
+                  }
                   onChange={setPackageStatusEdit}
                   style={{
                     maxWidth: '160px',

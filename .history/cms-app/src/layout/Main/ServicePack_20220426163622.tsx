@@ -124,7 +124,8 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
         return (
           <button
             onClick={() => {
-              setPackageStatusEdit(record.packageStatus)
+              console.log('fake', packageStatusEdit)
+              console.log('firebase', record.packageStatus)
               setPackUpdate(record)
               setIsOpenModalEdit(true)
             }}
@@ -153,8 +154,8 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
     console.log(time, timeString)
   }
   const options = [
-    { value: true, label: 'Đang áp dụng' },
-    { value: false, label: 'Tắt' },
+    { value: true, label: 'Đã sử dụng' },
+    { value: false, label: 'Chưa sử dụng' },
   ]
   //Add
   const [packageNameAdd, setPackageNameAdd] = useState<any>()
@@ -163,7 +164,9 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
   const [comboPriceAdd, setComboPriceAdd] = useState<any>()
   //Edit
   const [packageNameEdit, setPackageNameEdit] = useState<string>()
-  const [packageStatusEdit, setPackageStatusEdit] = useState<boolean>()
+  const [packageStatusEdit, setPackageStatusEdit] = useState<any>(
+    packUpdate.packageStatus | undefined
+  )
   const [ticketPriceEdit, setTicketPriceEdit] = useState<number>()
   const [comboPriceEdit, setComboPriceEdit] = useState<number>()
   const handleAddPack = async () => {

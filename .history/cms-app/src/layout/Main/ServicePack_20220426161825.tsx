@@ -124,7 +124,8 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
         return (
           <button
             onClick={() => {
-              setPackageStatusEdit(record.packageStatus)
+              console.log('edit', packageStatusEdit)
+              console.log(record.packageStatus)
               setPackUpdate(record)
               setIsOpenModalEdit(true)
             }}
@@ -153,8 +154,8 @@ const ServicePack: React.FunctionComponent<IServicePackProps> = (
     console.log(time, timeString)
   }
   const options = [
-    { value: true, label: 'Đang áp dụng' },
-    { value: false, label: 'Tắt' },
+    { value: true, label: 'Đã sử dụng' },
+    { value: false, label: 'Chưa sử dụng' },
   ]
   //Add
   const [packageNameAdd, setPackageNameAdd] = useState<any>()
